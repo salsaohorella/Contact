@@ -44,11 +44,18 @@ public class UserViewAdapter extends RecyclerView.Adapter<UserViewAdapter.ViewHo
             @Override
             public void onClick(View v) {
                 if (listener !=null){
-                    listener.onEditClicked(user.getId());
+                    listener.onEditClicked(user);
                 }
             }
         });
-
+        holder.ivDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(listener != null) {
+                    listener.onDeleteClicked(user.getId());
+                }
+            }
+        });
     }
 
     @Override

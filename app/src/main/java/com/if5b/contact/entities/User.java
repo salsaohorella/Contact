@@ -57,7 +57,7 @@ public class User implements Parcelable {
         }
     };
 
-    public User getId() {
+    public int getId() {
         return id;
     }
 
